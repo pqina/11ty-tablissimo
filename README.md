@@ -170,13 +170,29 @@ _Loki Laufeyson#_
 965-12-17
 ```
 
-Marvel Characters
-
-| Name                              | Birthdate                 |
-| --------------------------------- | ------------------------- |
-| [Tony Stark](#tony-stark)         | Friday, May 29, 1970      |
-| [Peter Parker](#spiderman)        | Friday, August 10, 2001   |
-| [Loki Laufeyson](#loki-laufeyson) | Tuesday, December 17, 965 |
+<caption>Marvel Characters</caption>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Birthdate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#tony-stark">Tony Stark</a></td>
+            <td>Friday, May 29, 1970</td>
+        </tr>
+        <tr>
+            <td><a href="#spiderman">Peter Parker</a></td>
+            <td>Friday, August 10, 2001</td>
+        </tr>
+        <tr>
+            <td><a href="#loki-laufeyson">Loki Laufeyson</a></td>
+            <td> Tuesday, December 17, 965</td>
+        </tr>
+    </tbody>
+</table>
 
 We can use `colspan(<number>)` to span a cell over multiple columns. `id(my-id)` and `class(my-class)` can be used to add id's and classes to table cells.
 
