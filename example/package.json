@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "name": "@pqina/tablissimo-example",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve"
+    },
+    "author": {
+        "name": "PQINA",
+        "url": "https://pqina.nl/"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+        "@pqina/11ty-tabletop": "file:..",
+        "markdown-it": "^12.0.6"
+    }
+}
