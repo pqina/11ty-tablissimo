@@ -54,6 +54,7 @@ Loki Laufeyson
 
 Turns into this table (but without the empty headers)
 
+| | |
 | ---------- | ---------- |
 | Tony Stark | 1970-05-29 |
 | Peter Parker | 2001-08-10 |
