@@ -286,7 +286,7 @@ _Loki Laufeyson#_
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#tony-stark">Tony Stark</a></th>
+            <th scope="row" class="highlight"><a href="#tony-stark">Tony Stark</a></th>
             <td data-format="date">Friday, May 29, 1970</td>
         </tr>
         <tr>
