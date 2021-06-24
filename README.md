@@ -54,11 +54,11 @@ Loki Laufeyson
 
 Turns into this table (but without the empty headers)
 
-| | |
-| ---------- | ---------- |
-| Tony Stark | 1970-05-29 |
-| Peter Parker | 2001-08-10 |
-| Loki Laufeyson | 965-12-17 |
+|                |            |
+| -------------- | ---------- |
+| Tony Stark     | 1970-05-29 |
+| Peter Parker   | 2001-08-10 |
+| Loki Laufeyson | 965-12-17  |
 
 We can underscores around a row to turn the row into a `th`.
 
@@ -85,6 +85,12 @@ _Peter Parker#spiderman_
 _Loki Laufeyson#_
 965-12-17
 ```
+
+|                                   |            |
+| --------------------------------- | ---------- |
+| [Tony Stark](#tony-stark)         | 1970-05-29 |
+| [Peter Parker](#spiderman)        | 2001-08-10 |
+| [Loki Laufeyson](#loki-laufeyson) | 965-12-17  |
 
 We can add metadata to format table body cells, first we add the formatter to our configuration then we add it in the table.
 
@@ -116,6 +122,12 @@ _Loki Laufeyson#_
 965-12-17
 ```
 
+|                                   |                           |
+| --------------------------------- | ------------------------- |
+| [Tony Stark](#tony-stark)         | Friday, May 29, 1970      |
+| [Peter Parker](#spiderman)        | Friday, August 10, 2001   |
+| [Loki Laufeyson](#loki-laufeyson) | Tuesday, December 17, 965 |
+
 Using the `:head:` metadata tag we can define headers for the table.
 
 ```
@@ -131,6 +143,12 @@ _Peter Parker#spiderman_
 _Loki Laufeyson#_
 965-12-17
 ```
+
+| Name                              | Birthdate                 |
+| --------------------------------- | ------------------------- |
+| [Tony Stark](#tony-stark)         | Friday, May 29, 1970      |
+| [Peter Parker](#spiderman)        | Friday, August 10, 2001   |
+| [Loki Laufeyson](#loki-laufeyson) | Tuesday, December 17, 965 |
 
 Using the `:caption:` metadata tag we can define a table caption element.
 
@@ -152,11 +170,19 @@ _Loki Laufeyson#_
 965-12-17
 ```
 
+Marvel Characters
+
+| Name                              | Birthdate                 |
+| --------------------------------- | ------------------------- |
+| [Tony Stark](#tony-stark)         | Friday, May 29, 1970      |
+| [Peter Parker](#spiderman)        | Friday, August 10, 2001   |
+| [Loki Laufeyson](#loki-laufeyson) | Tuesday, December 17, 965 |
+
 We can use `colspan(<number>)` to span a cell over multiple columns. `id(my-id)` and `class(my-class)` can be used to add id's and classes to table cells.
 
 ```
 :caption: Marvel Characters
-:head: Heroe colspan(2)
+:head: Hero colspan(2)
 :body: | format(date)
 
 _Tony Stark#_ class(highlight)
@@ -168,6 +194,28 @@ _Peter Parker#spiderman_
 _Loki Laufeyson#_
 965-12-17
 ```
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Hero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#tony-stark">Tony Stark</a></td>
+            <td>Friday, May 29, 1970</td>
+        </tr>
+        <tr>
+            <td><a href="#spiderman">Peter Parker</a></td>
+            <td>Friday, August 10, 2001</td>
+        </tr>
+        <tr>
+            <td><a href="#loki-laufeyson">Loki Laufeyson</a></td>
+            <td> Tuesday, December 17, 965</td>
+        </tr>
+    </tbody>
+</table>
 
 The `scope` attribute can be used to control the scope of a table header. If a `<th>` is rendered this attribute is automatically set to `row` or `col` depending on if the cell is in the `<tbody>` or the `<thead>` tree.
 
