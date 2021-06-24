@@ -170,8 +170,8 @@ _Loki Laufeyson#_
 965-12-17
 ```
 
-<caption>Marvel Characters</caption>
 <table>
+    <caption>Marvel Characters</caption>
     <thead>
         <tr>
             <th>Name</th>
