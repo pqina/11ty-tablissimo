@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
             pre: (str) => md.render('```html\n' + str + '\n```'),
 
             // fomat as code snippet
-            code: (str) => md.render('`' + str + '`').replace(/<p>|<\/p>/g, ''),
+            code: (str) => `<code>${str}</code>`,
 
             // format as date
             date: (str) =>

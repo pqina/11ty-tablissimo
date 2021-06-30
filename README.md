@@ -144,12 +144,12 @@ eleventyConfig.addPlugin(tablissimo, {
 });
 ```
 
-Now we add it to the `:body:` metadata tag. This tags value will be applied to each cell with the same index, note that we start with a pipe character, meaning the first cell is handled as plain text.
+Now we add it to the `body:` metadata tag. This tags value will be applied to each cell with the same index, note that we start with a pipe character, meaning the first cell is handled as plain text.
 
 A `data-format` attribute is automatically added to the cell to make styling easier.
 
 ```
-:body: | format(date)
+body: | =date
 
 _Tony Stark#_
 1970-05-29
@@ -178,11 +178,11 @@ _Loki Laufeyson#_
     </tbody>
 </table>
 
-Using the `:head:` metadata tag we can define headers for the table.
+Using the `head:` metadata tag we can define headers for the table.
 
 ```
-:head: Name | Birthdate
-:body: | format(date)
+head: Name | Birthdate
+body: | =date
 
 _Tony Stark#_
 1970-05-29
@@ -217,15 +217,15 @@ _Loki Laufeyson#_
     </tbody>
 </table>
 
-Using the `:caption:` metadata tag we can define a table caption element.
+Using the `caption:` metadata tag we can define a table caption element.
 
-Additionally we can use `:class:` and `:id:` to add the respective attributes to the table element.
+Additionally we can use `class:` and `id:` to add the respective attributes to the table element.
 
 ```
-:id: marvel-characters
-:caption: Marvel Characters
-:head: Name | Birthdate
-:body: | format(date)
+id: marvel-characters
+caption: Marvel Characters
+head: Name | Birthdate
+body: | =date
 
 _Tony Stark#_
 1970-05-29
@@ -264,11 +264,11 @@ _Loki Laufeyson#_
 We can use `colspan(<number>)` to span a cell over multiple columns. `id(my-id)` and `class(my-class)` can be used to add id's and classes to table cells.
 
 ```
-:caption: Marvel Characters
-:head: Hero colspan(2)
-:body: | format(date)
+caption: Marvel Characters
+head: Hero colspan="2"
+body: | =date
 
-_Tony Stark#_ class(highlight)
+_Tony Stark#_ class="highlight"
 1970-05-29
 
 _Peter Parker#spiderman_
@@ -308,9 +308,9 @@ A quick example on how to use the `{% tablissimo %}` shortcode in your templates
 
 ```
 {% tablissimo %}
-:caption: TVA Timeline Disruptions
-:head: Event | Date | Time | Location
-:body: | format(date) | | format(location)
+caption: TVA Timeline Disruptions
+head: Event | Date | Time | Location
+body: | =date | | =location
 
 _46465189=703_
 2301-04-23

@@ -80,7 +80,7 @@ c
 ## Basic table with header
 
 {% tablissimo %}
-:head: fobaba | number | character
+head: fobaba | number | character
 
 _foo_
 0
@@ -98,7 +98,7 @@ c
 ```
 {% raw %}
 {% tablissimo %}
-:head: fobaba | number | character
+head: fobaba | number | character
 
 _foo_
 0
@@ -118,7 +118,7 @@ c
 ## Basic table with row anchors
 
 {% tablissimo %}
-:head: fobaba | number | character
+head: fobaba | number | character
 
 _foo#_
 0
@@ -136,7 +136,7 @@ c
 ```
 {% raw %}
 {% tablissimo %}
-:head: fobaba | number | character
+head: fobaba | number | character
 
 _foo#_
 0
@@ -156,8 +156,8 @@ c
 ## Table with date formatter
 
 {% tablissimo %}
-:head: fobaba | number | character | date
-:body: | | | format(date)
+head: fobaba | number | character | date
+body: | | | =date
 
 _foo_
 0
@@ -178,8 +178,8 @@ c
 ```
 {% raw %}
 {% tablissimo %}
-:head: fobaba | number | character | date
-:body: | | | format(date)
+head: fobaba | number | character | date
+body: | | | =date
 
 _foo_
 0
@@ -202,8 +202,8 @@ c
 ## Table with markdown
 
 {% tablissimo %}
-:head: fobaba | number | character | date | markdown
-:body: | | | format(date) | format(markdown)
+head: fobaba | number | character | date | markdown
+body: | | | =date | =markdown
 
 _foo_
 0
@@ -228,8 +228,8 @@ Easy [going](#going)
 ```
 {% raw %}
 {% tablissimo %}
-:head: fobaba | number | character | date | markdown
-:body: | | | format(date) | format(markdown)
+head: fobaba | number | character | date | markdown
+body: | | | =date | =markdown
 
 _foo_
 0
@@ -256,12 +256,12 @@ Easy [going](#going)
 ## Loki table
 
 {% tablissimo "loki" %}
-:id: my-loki-table-id
-:class: my-loki-table-class
-:data-variant: Loki
-:caption: TVA Timeline Disruptions
-:head: Event | Date | Time | Location
-:body: format(code) | format(date) | | format(location)
+id: my-loki-table-id
+class: my-loki-table-class
+data-variant: Loki
+caption: TVA Timeline Disruptions
+head: Event | Date | Time | Location
+body: =code | =date | | =location
 
 _46465189=703_
 2301-04-23
@@ -293,12 +293,12 @@ Rome, Italy
 ```
 {% raw %}
 {% tablissimo "loki" %}
-:id: my-loki-table-id
-:class: my-loki-table-class
-:data-variant: Loki
-:caption: TVA Timeline Disruptions
-:head: Event | Date | Time | Location
-:body: format(code) | format(date) | | format(location)
+id: my-loki-table-id
+class: my-loki-table-class
+data-variant: Loki
+caption: TVA Timeline Disruptions
+head: Event | Date | Time | Location
+body: =code | =date | | =location
 
 _46465189=703_
 2301-04-23
