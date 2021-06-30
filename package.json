@@ -1,6 +1,6 @@
 {
     "name": "@pqina/11ty-tablissimo",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -13,6 +13,6 @@
     "repository": "pqina/11ty-tablissimo",
     "license": "MIT",
     "dependencies": {
-        "@pqina/tablissimo": "0.0.4"
+        "@pqina/tablissimo": "0.0.5"
     }
 }
